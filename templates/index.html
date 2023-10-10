@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>
+            Whitmemit 레이아웃 1
+        </title>
+
+        <!-- UTF-8로 인코딩을 지정합니다. !-->
+        <meta charset="utf-8"></meta>
+
+        <!-- 스타일을 지정합니다. !-->
+        <style>
+
+            /* 시스템 기본 폰트 NanumGothic 으로 지정 요청합니다. */
+            body{
+                font-family: 'NanumSquareRound';
+            }
+            *{
+                font-family: 'NanumSquareRound';
+            }
+
+            /* 윗쪽 입력 공간을 만듭니다. */
+            .top_div{
+
+                display: inline-block;
+                position: fixed;
+                top:0px;
+                left:0px;
+
+                background: white;
+
+                width:100%;
+                height:calc(100% - 200px);
+
+                box-sizing:border-box;
+                padding:20px;
+
+                font-size:20px;
+
+                overflow: auto;
+            }
+
+            /* 윗쪽 입력 공간에 대해서 안의 결과 창을 중앙으로 지정 합니다. */
+            .top_div .center{
+
+                display: inline-block;
+                position: absolute;
+
+                left:50%;
+                top:50%;
+
+                transform: translate(-50%, -50%);
+
+                padding: 20px;
+
+
+                background: white;
+                box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+
+            }
+
+            .top_div .center .title{
+
+                font-size: 30px;
+                font-weight:bold;
+
+            }
+
+            .top_div .center .content{
+
+                font-size: 20px;
+                margin:5px;
+
+            }
+
+            /* 아랫쪽 입력 공간을 만듭니다. */
+            .bottom_div{
+
+                display: inline-block;
+                position: fixed;
+                bottom:0px;
+                left:0px;
+
+                background: #151515;
+
+                width:100%;
+                height:200px;
+
+                box-sizing:border-box;
+                padding:20px;
+
+                font-size:20px;
+
+                box-shadow: 0px -1px 3px rgba(0,0,0,0.5);
+            }
+
+
+            /* 아랫쪽의 입력 영역을 나타내는 구간입니다. */
+            .bottom_div .title{
+                width:100%;
+
+                color: #ffffff;
+                font-size:30px;
+            }
+
+            .bottom_div .description{
+                width:100%;
+
+                color: #ffffff;
+                font-size:30px;
+            }
+
+            .bottom_div .description .textbox{
+
+                margin-top: 10px;
+
+                width:100%;
+
+                background: #151515;
+                color: #ffffff;
+                font-size:30px;
+                padding:20px;
+
+                outline: none;
+                border: none;
+
+                resize: none;
+
+                text-shadow: 2px 2px 1px rgba(0,0,0,0.5);
+            }
+
+
+        </style>
+    </head>
+
+<body>
+    <div class="top_div">
+
+        <div class="center">
+            <div class="title">
+                결과
+            </div>
+            <!-- 결과 창의 ID는 content로 지정합니다. 이 이름은 추후 자바스크립트에서 결과가 발생했을 때 대체할 공간으로 사용됩니다. !-->
+            <div id="result_content" class="content" >
+                결과 입니다.
+            </div>
+        </div>
+
+    </div>
+    <div class="bottom_div">
+
+        <div class="title">
+            메시지를 입력하세요.
+        </div>
+
+        <div class="description">
+            <!-- 입력 박스의 이름은 description_box 로 지정합니다.
+            description_box 라는 이름은 추후 자바스크립트에서 입력을 감지할 때 사용합니다. !-->
+            <input type="textbox" id="description_box"  class="textbox" placeholder="메시지를 입력하십시오."></input>
+        </div>
+
+    </div>
+
+</body>
+<script src="/static/request.js"></script>
+
+
+
+
+</html>
